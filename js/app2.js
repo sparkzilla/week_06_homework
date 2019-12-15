@@ -19,29 +19,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const createReadingListItem = function (form) {
       const readingListItem = document.createElement('li');
 
-
       const sight = document.createElement('h2');
       sight.textContent = form.sight.value;
       readingListItem.appendChild(sight);
 
+      const city = document.createElement('h3');
+      city.textContent = form.city.value;
+      readingListItem.appendChild(city);
+
+      const status = document.createElement('p');
+      status.textContent = form.status.value;
+      readingListItem.appendChild(status);
+
       return readingListItem;
 
     }
-
-
-      //
-      // const newCity = document.createElement('h3');
-      // const city = document.querySelector('li')
-      // newCity.textContent = `${event.target.city.value}`;
-      // city.appendChild(newCity);
-      //
-      // const newStatus = document.createElement('p');
-      // const status = document.querySelector('li')
-      // newStatus.textContent = `${event.target.status.value}`;
-      // status.appendChild(newStatus);
-
-
-//      document.getElementById('new-item-form').reset();
 
 
 
