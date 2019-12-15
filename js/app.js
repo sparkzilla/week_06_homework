@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     formElement.addEventListener('submit', handleFormSubmit);
 
-    const buttonElement = document.querySelector('#delete-all');
+    const buttonElement = document.querySelector('#delete-button');
     const handleButtonClick = function() {
     const list = document.querySelector('#places-list');
     list.innerHTML  = '';
