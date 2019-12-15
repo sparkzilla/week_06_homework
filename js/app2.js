@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const newItemform = document.querySelector('#new-item-form');
   newItemform.addEventListener('submit', handleFormSubmit);
 
+  const deleteAllButton = document.querySelector('#delete-all');
+  deleteAllButton.addEventListener('click', handleDeleteAllClick);
+
   })
 
   //FORM
@@ -13,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const readingListItem = createReadingListItem(event.target);
     const readingList = document.querySelector('#places-list');
     readingList.appendChild(readingListItem);
+
+    event.target.reset();
 
   }
 
@@ -35,24 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-
-
-
-
-
-
-
-
-// //BUTTON
-//     const buttonElement = document.querySelector('#delete-all');
-//     const handleButtonClick = function() {
-//     const list = document.querySelector('#places-list');
-//     list.innerHTML  = '';
-//     }
-//
-//     buttonElement.addEventListener('click', handleButtonClick);
-
-
-
-//${event.target.city.value} ${event.target.status.value}`;
-//newPlace.classList.add('list');
+    const handleDeleteAllClick = function (event) {
+      const readingList = document.querySelector('#places-list');
+      readingList.innerHTML = '';
+    }
